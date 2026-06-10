@@ -58,3 +58,61 @@ function aplicarTema(nome) {
 
   localStorage.setItem('so-tema', nome);
 }
+
+let slideAtual = 0;
+let slideshowTimer = null;
+
+function iniciarSlideshow() {
+  const slides = document.querySelectorAll('.slide');
+  const dots   = document.querySelectorAll('.slide-dot');
+  if (!slides.length) return;
+
+  function mostrarSlide(idx) {
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    dots.forEach((d, i)   => d.classList.toggle('active', i === idx));
+    slideAtual = idx;
+  }
+
+  function proximo() {
+    mostrarSlide((slideAtual + 1) % slides.length);
+  }
+
+  function anterior() {
+    mostrarSlide((slideAtual - 1 + slides.length) % slides.length);
+  }
+
+  function reiniciarTimer() {
+    clearInterval(slideshowTimer);
+    slideshowTimer = setInterval(proximo, 3000);
+  }
+
+  document.getElementById('slide-next')?.addEventListener('click', () => { proximo(); reiniciarTimer(); });
+  document.getElementById('slide-prev')?.addEventListener('click', () => { anterior(); reiniciarTimer(); });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { mostrarSlide(i); reiniciarTimer(); });
+  });
+
+  mostrarSlide(0);
+  reiniciarTimer();
+}
+
+function iniciarFormulario() {
+  const form = document.getElementById("contato-form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("campo-nome").value;
+    const email = document.getElementById("campo-email").value;
+    const mensagem = document.getElementById("campo-mensagem").value;
+
+    if (nome === "" || email === "" || mensagem === "") {
+      alert("Preencha todos os campos.");
+      return;
+    }
+
+    alert("Mensagem enviada com sucesso!");
+    form.reset();
+  });
+}
