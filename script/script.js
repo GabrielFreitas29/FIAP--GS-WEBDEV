@@ -116,3 +116,14 @@ function iniciarFormulario() {
     form.reset();
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const temaSalvo = localStorage.getItem('so-tema') || 'verde';
+  aplicarTema(temaSalvo);
+
+  document.querySelectorAll('.theme-btn').forEach(btn => {
+    btn.addEventListener('click', () => aplicarTema(btn.dataset.tema));
+  });
+  iniciarSlideshow();
+  iniciarFormulario();
+});
