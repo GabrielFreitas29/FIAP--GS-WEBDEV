@@ -169,3 +169,114 @@ body {
   gap: 10px;
   padding: 0 28px 20px;
 }
+.opcao-btn {
+  width: 100%;
+  text-align: left;
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.95rem;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.opcao-btn:hover:not(:disabled) {
+  background: rgba(52,168,90,0.1);
+  border-color: rgba(52,168,90,0.4);
+  color: var(--white);
+}
+
+.opcao-btn.correta {
+  background: rgba(52,168,90,0.18);
+  border-color: var(--green-light);
+  color: #86EFAC;
+}
+
+.opcao-btn.errada {
+  background: rgba(239,68,68,0.15);
+  border-color: rgba(239,68,68,0.5);
+  color: #FCA5A5;
+}
+
+.q-feedback {
+  display: none;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 28px 16px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.q-feedback.acerto {
+  background: rgba(52,168,90,0.15);
+  border: 1px solid rgba(52,168,90,0.3);
+  color: #86EFAC;
+}
+
+.q-feedback.erro {
+  background: rgba(239,68,68,0.12);
+  border: 1px solid rgba(239,68,68,0.3);
+  color: #FCA5A5;
+}
+
+.q-feedback.aviso {
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.3);
+  color: #FCD34D;
+}
+
+.quiz-footer {
+  padding: 0 28px 28px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-proximo {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 12px 26px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: all var(--transition);
+  box-shadow: 0 4px 16px rgba(27,123,58,0.35);
+}
+
+.btn-proximo:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+.resultado-area {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 50px 30px;
+  flex-wrap: wrap;
+}
+
+.res-circulo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid var(--green-light);
+  background: rgba(52,168,90,0.15);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
