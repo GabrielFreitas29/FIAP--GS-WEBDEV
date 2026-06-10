@@ -70,3 +70,76 @@ const perguntas = [
     correta: 2
   }
 ];
+
+let questaoAtual = 0;
+let acertos = 0;
+
+function mostrarQuestao() {
+  const pergunta = perguntas[questaoAtual];
+
+  document.getElementById("q-numero").textContent =
+    `Pergunta ${questaoAtual + 1} de ${perguntas.length}`;
+
+  document.getElementById("q-texto").textContent =
+    pergunta.texto;
+
+  const opcoes = document.getElementById("q-opcoes");
+  opcoes.innerHTML = "";
+
+  pergunta.opcoes.forEach((opcao, indice) => {
+    const botao = document.createElement("button");
+
+    botao.textContent = opcao;
+    botao.classList.add("opcao-btn");
+
+    botao.onclick = () => responder(indice);
+
+    opcoes.appendChild(botao);
+  });
+}
+
+function responder(indice) {
+  if (indice === perguntas[questaoAtual].correta) {
+    acertos++;
+    alert("Resposta correta!");
+  } else {
+    alert("Resposta incorreta!");
+  }
+
+  questaoAtual++;
+
+  if (questaoAtual < perguntas.length) {
+    mostrarQuestao();
+  } else {
+    mostrarResultado();
+  }
+}
+
+function mostrarResultado() {
+  document.getElementById("quiz-area").style.display = "none";
+  document.getElementById("resultado-area").style.display = "flex";
+
+  document.getElementById("res-acertos").textContent = acertos;
+  document.getElementById("res-total").textContent = perguntas.length;
+
+  const porcentagem =
+    Math.round((acertos / perguntas.length) * 100);
+
+  document.getElementById("res-pct").textContent =
+    porcentagem + "%";
+
+  if (porcentagem >= 90) {
+    document.getElementById("res-mensagem").textContent =
+      "Excelente conhecimento!";
+  } else if (porcentagem >= 60) {
+    document.getElementById("res-mensagem").textContent =
+      "Bom desempenho!";
+  } else {
+    document.getElementById("res-mensagem").textContent =
+      "Revise o conteúdo da página.";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  mostrarQuestao();
+});
