@@ -1,0 +1,22 @@
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+:root {
+  --green:        #1B7B3A;
+  --green-light:  #34A85A;
+  --green-dark:   #155c2c;
+  --blue:         #1253A4;
+  --blue-light:   #3B82F6;
+  --bg-dark:      #0C1520;
+  --bg-card:      #121e2d;
+  --white:        #FFFFFF;
+  --text-light:   rgba(255,255,255,0.7);
+  --radius-sm:    8px;
+  --radius-md:    16px;
+  --radius-lg:    24px;
+  --radius-full:  9999px;
+  --transition:   0.25s ease;
+}
