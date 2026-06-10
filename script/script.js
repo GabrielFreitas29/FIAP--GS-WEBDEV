@@ -45,3 +45,16 @@ const temaConfig = {
     '--accent-theme': '#34A85A',
   }
 };
+
+function aplicarTema(nome) {
+  const root = document.documentElement;
+  const vars = temaConfig[nome];
+  if (!vars) return;
+  Object.entries(vars).forEach(([prop, val]) => root.style.setProperty(prop, val));
+
+  document.querySelectorAll('.theme-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tema === nome);
+  });
+
+  localStorage.setItem('so-tema', nome);
+}
