@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SentinelaOrbital — Monitoramento Climático Inteligente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <i class="fa-solid fa-satellite-dish" aria-hidden="true"></i> SentinelaOrbital
+      </a>
+      <ul class="nav-links">
+        <li><a href="#problema">O Problema</a></li>
+        <li><a href="#tecnologia">Tecnologias</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#publico">Público-Alvo</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#aplicacao">Aplicação</a></li>
+        <li><a href="pages/quiz.html" class="nav-quiz-btn">Quiz</a></li>
+      </ul>
+      <div class="theme-bar">
+        <button class="theme-btn active" data-tema="verde" title="Tema Verde">
+          <i class="">Verde</i> 
+        </button>
+        <button class="theme-btn" data-tema="azul" title="Tema Azul">
+          <i class="">Azul</i> 
+        </button>
+        <button class="theme-btn" data-tema="escuro" title="Tema Escuro">
+          <i class="">Escuro</i> 
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-flex" aria-hidden="true"></div>
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-badge">
+          <span class="pulse">●</span> Monitoramento em tempo real
+        </span>
+        <h1 class="hero-title">
+          Sentinela<span class="accent">Orbital</span>
+        </h1>
+        <p class="hero-subtitle">
+          Monitoramento climático inteligente para proteger comunidades vulneráveis.
+        </p>
+        <div class="hero-actions">
+          <a href="#problema" class="btn btn-primary">
+            Conheça a solução <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
+          <a href="#tecnologia" class="btn btn-ghost">Ver tecnologias</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">Baixo Custo</span>
+            <span class="stat-label">Tecnologia acessível</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Monitoramento contínuo</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-number">Alertas Locais</span>
+            <span class="stat-label">Mesmo sem internet</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="globe-container">
+          <div class="globe" aria-label="Representação de satélite em órbita">
+            <div class="globe-ring ring-1"></div>
+            <div class="globe-ring ring-2"></div>
+            <div class="globe-ring ring-3"></div>
+            <div class="globe-core">
+              <i class="fa-solid fa-earth-americas" aria-hidden="true"></i>
+            </div>
+            <div class="alert-dot dot-1" aria-hidden="true"></div>
+            <div class="alert-dot dot-2" aria-hidden="true"></div>
+            <div class="alert-dot dot-3" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-slideshow" id="slideshow">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">
+          <i class="fa-solid fa-images"></i> Galeria de Impactos
+        </span>
+        <h2 class="section-title" style="color:#fff;">Desastres que o monitoramento pode prevenir</h2>
+      </div>
+
+      <div class="slideshow-wrapper">
+        <div class="slide active">
+          <img src="images/alagamento.jpg" alt="Enchente em área urbana" />
+          <div class="slide-caption">
+            <span class="slide-tag"><i class="fa-solid fa-water"></i> Enchentes</span>
+            <h3>Enchentes em comunidades vulneráveis</h3>
+            <p>Alertas precoces permitem evacuação antes que o nível da água se torne fatal para moradores em áreas de risco.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/incendios.jpg" alt="Queimada em área florestal" />
+          <div class="slide-caption">
+            <span class="slide-tag"><i class="fa-solid fa-fire-flame-curved"></i> Queimadas</span>
+            <h3>Queimadas em áreas florestais</h3>
+            <p>Sensores infravermelhos em satélites detectam focos de calor horas antes de incêndios atingirem populações rurais.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/estrada.jpg" alt="Estrada destruída por alagamento" />
+          <div class="slide-caption">
+            <span class="slide-tag"><i class="fa-solid fa-satellite"></i> Monitoramento</span>
+            <h3>Monitoramento climático por satélites</h3>
+            <p>Imagens orbitais em tempo real revelam riscos de erosão e desabamento de infraestrutura antes do colapso.</p>
+          </div>
+        </div>
+        <div class="slideshow-controls">
+          <button class="slide-arrow" id="slide-prev" aria-label="Slide anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="slide-dots">
+            <button class="slide-dot active" aria-label="Slide 1"></button>
+            <button class="slide-dot" aria-label="Slide 2"></button>
+            <button class="slide-dot" aria-label="Slide 3"></button>
+          </div>
+          <button class="slide-arrow" id="slide-next" aria-label="Próximo slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-problema" id="problema">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> O Cenário Atual
+        </span>
+        <h2 class="section-title">O Desafio Climático nas Comunidades</h2>
+        <p class="section-desc">Eventos severos estão aumentando em frequência e intensidade, sobrecarregando os métodos tradicionais de previsão e resposta.</p>
+      </div>
+      <div class="problema-layout">
+        <div class="problema-text">
+          <div class="problema-item">
+            <div class="problema-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></div>
+            <div>
+              <h3>Falta de Avisos Prévios</h3>
+              <p>Populações em áreas de risco são surpreendidas por enchentes e deslizamentos sem tempo hábil para salvar vidas e bens essenciais.</p>
+            </div>
+          </div>
+          <div class="problema-item">
+            <div class="problema-icon"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i></div>
+            <div>
+              <h3>Dados Fragmentados</h3>
+              <p>Informações de satélites e estações locais raramente conversam entre si de forma integrada e ágil para gerar relatórios imediatos.</p>
+            </div>
+          </div>
+          <div class="problema-item">
+            <div class="problema-icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
+            <div>
+              <h3>Comunicação Ineficiente</h3>
+              <p>Os alertas emitidos frequentemente não chegam à ponta final — os moradores vulneráveis — devido a falhas ou canais complexos demais.</p>
+            </div>
+          </div>
+        </div>
+        <div class="problema-visual">
+          <div class="problema-card-stat">
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            <span class="big-number">+40%</span>
+            <p>Aumento global em desastres meteorológicos na última década.</p>
+          </div>
+          <div class="problema-card-stat accent-blue">
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
+            <span class="big-number">2 bi</span>
+            <p>Pessoas afetadas por eventos climáticos extremos nos últimos 20 anos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tech" id="tecnologia">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">
+          <i class="fa-solid fa-microchip" aria-hidden="true"></i> Pilares Tecnológicos
+        </span>
+        <h2 class="section-title">Tecnologias do Sistema</h2>
+        <p class="section-desc">Uma arquitetura moderna que combina monitoramento orbital, sensores terrestres e inteligência artificial.</p>
+      </div>
+      <div class="tech-flex">
+        <div class="tech-card">
+          <div class="tech-card-icon"><i class="fa-solid fa-satellite" aria-hidden="true"></i></div>
+          <h3 class="tech-card-title">Satélites</h3>
+          <p class="tech-card-desc">Imagens multiespectrais e dados de temperatura da superfície terrestre com atualização frequente via APIs abertas.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card-icon"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
+          <h3 class="tech-card-title">IoT</h3>
+          <p class="tech-card-desc">Sensores de pluviosidade, nível de rios e qualidade do ar instalados em pontos críticos transmitem dados em tempo real.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card-icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
+          <h3 class="tech-card-title">Inteligência Artificial</h3>
+          <p class="tech-card-desc">Modelos preditivos identificam padrões de risco combinando histórico climático e dados ao vivo dos sensores.</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-card-icon"><i class="fa-solid fa-bell" aria-hidden="true"></i></div>
+          <h3 class="tech-card-title">Alertas Multicanal</h3>
+          <p class="tech-card-desc">Notificações via SMS, app e sirenes locais — sem depender de conectividade plena para comunidades remotas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-objetivos" id="objetivos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">
+          <i class="fa-solid fa-bullseye" aria-hidden="true"></i> Missão
+        </span>
+        <h2 class="section-title">Objetivos do Projeto</h2>
+      </div>
+      <div class="objetivos-layout">
+        <div class="objetivos-text">
+          <div class="objetivo-item">
+            <span class="num">01</span>
+            <div>
+              <h3>Detectar riscos com antecedência</h3>
+              <p>Identificar sinais de enchentes, queimadas e deslizamentos horas ou dias antes de ocorrerem.</p>
+            </div>
+          </div>
+          <div class="objetivo-item">
+            <span class="num">02</span>
+            <div>
+              <h3>Notificar quem mais precisa</h3>
+              <p>Garantir que alertas cheguem às comunidades vulneráveis mesmo em áreas de baixa conectividade.</p>
+            </div>
+          </div>
+          <div class="objetivo-item">
+            <span class="num">03</span>
+            <div>
+              <h3>Apoiar a Defesa Civil</h3>
+              <p>Fornecer painel de dados e relatórios para gestores públicos tomarem decisões baseadas em evidências.</p>
+            </div>
+          </div>
+          <div class="objetivo-item">
+            <span class="num">04</span>
+            <div>
+              <h3>Ser acessível e escalável</h3>
+              <p>Utilizar tecnologia open-source e de baixo custo para que o sistema possa ser replicado em qualquer região.</p>
+            </div>
+          </div>
+        </div>
+        <div class="objetivos-visual">
+          <div class="target-graphic">
+            <div class="target-ring t1"></div>
+            <div class="target-ring t2"></div>
+            <div class="target-ring t3"></div>
+            <div class="target-center"><i class="fa-solid fa-satellite-dish"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-publico" id="publico">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">
+          <i class="fa-solid fa-people-group" aria-hidden="true"></i> Quem Protegemos
+        </span>
+        <h2 class="section-title">Público-Alvo</h2>
+        <p class="section-desc">O SentinelaOrbital foi desenvolvido pensando nas populações mais vulneráveis aos impactos das mudanças climáticas.</p>
+      </div>
+      <div class="publico-flex">
+        <div class="publico-card">
+          <div class="publico-icon"><i class="fa-solid fa-house-flood-water" aria-hidden="true"></i></div>
+          <h3>Comunidades de Risco</h3>
+          <p>Moradores de encostas, várzeas e periferias urbanas sujeitas a enchentes e deslizamentos.</p>
+        </div>
+        <div class="publico-card">
+          <div class="publico-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+          <h3>Defesa Civil</h3>
+          <p>Agentes públicos responsáveis por coordenar evacuações e resposta a desastres no território nacional.</p>
+        </div>
+        <div class="publico-card">
+          <div class="publico-icon"><i class="fa-solid fa-seedling" aria-hidden="true"></i></div>
+          <h3>Agricultores Familiares</h3>
+          <p>Pequenos produtores rurais que dependem do clima para proteger suas plantações e garantir renda.</p>
+        </div>
+        <div class="publico-card">
+          <div class="publico-icon"><i class="fa-solid fa-tree" aria-hidden="true"></i></div>
+          <h3>Povos Indígenas</h3>
+          <p>Comunidades tradicionais em territórios com alto risco de queimadas e secas extremas.</p>
+        </div>
+        <div class="publico-card">
+          <div class="publico-icon"><i class="fa-solid fa-building-user" aria-hidden="true"></i></div>
+          <h3>Lideranças Locais</h3>
+          <p>Organizações comunitárias e líderes que coordenam ações de defesa civil e evacuação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-beneficios" id="beneficios">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">
+          <i class="fa-solid fa-star" aria-hidden="true"></i> Vantagens
+        </span>
+        <h2 class="section-title">Benefícios do Sistema</h2>
+      </div>
+      <div class="beneficios-flex">
+        <div class="beneficio-card">
+          <div class="bene-icon green"><i class="fa-solid fa-bell" aria-hidden="true"></i></div>
+          <h3>Alertas Antecipados</h3>
+          <p>Notificações até 72h antes de eventos extremos, permitindo evacuação segura e preparação.</p>
+        </div>
+        <div class="beneficio-card">
+          <div class="bene-icon blue"><i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i></div>
+          <h3>Mitigação de Danos</h3>
+          <p>Proteção patrimonial, de lavouras e infraestruturas com ações preventivas baseadas em dados históricos.</p>
+        </div>
+        <div class="beneficio-card">
+          <div class="bene-icon green"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i></div>
+          <h3>Decisões Estratégicas</h3>
+          <p>Painel limpo focado na gestão pública e Defesa Civil tomarem decisões baseadas em evidências analíticas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="aplicacao" class="section section-aplicacao">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">
+          <i class="fas fa-mobile-alt"></i> Aplicação
+        </span>
+        <h2 class="section-title">Aplicação no Dia a Dia</h2>
+        <p class="section-desc">A comunidade recebe alertas simples e rápidos para agir antes que o desastre aconteça.</p>
+      </div>
+      <div class="aplicacao-layout">
+        <div class="aplicacao-info">
+          <p class="section-desc">O sistema monitora enchentes, queimadas e condições climáticas em tempo real.</p>
+          <p class="section-desc" style="margin-top: 15px;">Os alertas ajudam moradores, agricultores e lideranças a proteger pessoas, moradias e plantações.</p>
+          <div class="risk-legend">
+            <div class="risk-item risk-normal">
+              <span class="risk-dot"></span>
+              <strong>Baixo risco:</strong> situação normal.
+            </div>
+            <div class="risk-item risk-high">
+              <span class="risk-dot"></span>
+              <strong>Risco moderado:</strong> atenção necessária.
+            </div>
+            <div class="risk-item risk-critical">
+              <span class="risk-dot"></span>
+              <strong>Risco crítico:</strong> ação imediata.
+            </div>
+          </div>
+        </div>
+        <div class="aplicacao-visual">
+          <div class="mock-device">
+            <div class="mock-screen">
+              <div class="mock-header">
+                <i class="fas fa-satellite"></i>
+                SentinelaOrbital
+                <span class="mock-live">AO VIVO</span>
+              </div>
+              <div class="mock-alert alert-red">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                  <strong>Alerta de Enchente</strong>
+                  <small>Nível do rio acima do limite seguro.</small>
+                </div>
+              </div>
+              <div class="mock-stat-row">
+                <div class="mock-stat">
+                  <span>Temperatura</span>
+                  <strong>32<small>°C</small></strong>
+                </div>
+                <div class="mock-stat">
+                  <span>Umidade</span>
+                  <strong>81<small>%</small></strong>
+                </div>
+              </div>
+              <div class="mock-footer-app">
+                <i class="fas fa-info-circle"></i>
+                <span>Dados integrados de satélites e sensores locais.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-contato" id="contato">
+    <div class="container">
+      <div class="contato-layout">
+        <div class="contato-info">
+          <h2>Fale com a equipe <span>Byte Force</span></h2>
+          <p>Tem dúvidas sobre o projeto ou quer colaborar? Envie uma mensagem — nossa equipe responde em breve.</p>
+          <div class="contato-detalhe">
+            <div class="contato-item">
+              <i class="fa-solid fa-location-dot"></i>
+              FIAP — São Paulo, Brasil
+            </div>
+            <div class="contato-item">
+              <i class="fa-solid fa-graduation-cap"></i>
+              Projeto Acadêmico — Global Solution 2026
+            </div>
+            <div class="contato-item">
+              <i class="fa-brands fa-github"></i>
+              github.com/GabrielFreitas29/FIAP-GS-FRONTEND
+            </div>
+          </div>
+        </div>
+
+        <div class="contato-form-wrap">
+          <form id="contato-form" novalidate>
+            <div class="form-group">
+              <label for="campo-nome">Nome</label>
+              <input type="text" id="campo-nome" name="nome" placeholder="Seu nome completo" autocomplete="name" />
+              <span class="form-erro" id="erro-nome">Informe seu nome (mínimo 2 caracteres).</span>
+            </div>
+            <div class="form-group">
+              <label for="campo-email">E-mail</label>
+              <input type="email" id="campo-email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" />
+              <span class="form-erro" id="erro-email">Informe um e-mail válido.</span>
+            </div>
+            <div class="form-group">
+              <label for="campo-mensagem">Mensagem</label>
+              <textarea id="campo-mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+              <span class="form-erro" id="erro-mensagem">A mensagem deve ter ao menos 10 caracteres.</span>
+            </div>
+            <button type="submit" class="btn-enviar">
+              <i class="fa-solid fa-paper-plane"></i> Enviar mensagem
+            </button>
+            <div class="form-sucesso" id="form-sucesso">
+              <i class="fa-solid fa-circle-check"></i>
+              Mensagem enviada com sucesso! Entraremos em contato em breve.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">
+          <i class="fa-solid fa-satellite-dish" aria-hidden="true"></i> SentinelaOrbital
+        </a>
+        <p class="footer-desc">
+          Unindo tecnologia de ponta, open-source e responsabilidade social para blindar as comunidades brasileiras contra as crises do clima.
+        </p>
+      </div>
+      <div class="footer-team">
+        <h4>Equipe — Byte Force</h4>
+        <ul>
+          <li>
+            <span class="member-name">Gabriel Freitas</span>
+            <span class="member-rm">RM: 570881</span>
+          </li>
+          <li>
+            <span class="member-name">Erick Picolo</span>
+            <span class="member-rm">RM: 572892</span>
+          </li>
+          <li>
+            <span class="member-name">Guilherme Dantas</span>
+            <span class="member-rm">RM: 572171</span>
+          </li>
+          <li>
+            <span class="member-name">Luiz Cardoso</span>
+            <span class="member-rm">RM: 569782</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 SentinelaOrbital · Desenvolvido pela equipe Byte Force para fins acadêmicos e sociais.</p>
+    </div>
+  </footer>
+
+  <script src="script/script.js"></script>
+</body>
+</html>
