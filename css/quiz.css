@@ -20,6 +20,7 @@
   --radius-full:  9999px;
   --transition:   0.25s ease;
 }
+
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg-dark);
@@ -169,6 +170,7 @@ body {
   gap: 10px;
   padding: 0 28px 20px;
 }
+
 .opcao-btn {
   width: 100%;
   text-align: left;

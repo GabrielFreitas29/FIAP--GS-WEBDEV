@@ -1,72 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz — SentinelaOrbital</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="../css/quiz.css" />
-  </head>
-  <body>
-    <nav class="quiz-nav">
-      <a href="../index.html" class="quiz-nav-logo">
-        <i class="fa-solid fa-satellite-dish"></i> SentinelaOrbital
-      </a>
-      <a href="../index.html" class="btn-voltar">
-        <i class="fa-solid fa-arrow-left"></i> Voltar ao início
-      </a>
-    </nav>
-    <div class="quiz-hero">
-      <div class="quiz-badge">
-        <i class="fa-solid fa-circle-question"></i> Quiz Educativo
-      </div>
-      <h1>Teste seu <span>conhecimento</span></h1>
-      <p>10 perguntas sobre mudanças climáticas, monitoramento ambiental e prevenção de desastres.</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz — SentinelaOrbital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="../css/quiz.css" />
+</head>
+<body>
+
+  <nav class="quiz-nav">
+    <a href="../index.html" class="quiz-nav-logo">
+      <i class="fa-solid fa-satellite-dish"></i> SentinelaOrbital
+    </a>
+    <a href="../index.html" class="btn-voltar">
+      <i class="fa-solid fa-arrow-left"></i> Voltar ao início
+    </a>
+  </nav>
+
+  <div class="quiz-hero">
+    <div class="quiz-badge">
+      <i class="fa-solid fa-circle-question"></i> Quiz Educativo
     </div>
-    <div class="quiz-wrapper">
-      <div class="quiz-card">
-        <div id="quiz-area">
-          <div class="quiz-progresso-bar">
-            <div class="quiz-progresso-fill" id="q-progresso"></div>
-          </div>
-          <div class="quiz-top">
-            <span class="q-numero" id="q-numero">Pergunta 1 de 10</span>
-          </div>
-          <p class="q-texto" id="q-texto"></p>
-          <div class="q-opcoes" id="q-opcoes"></div>
-          <div class="q-feedback" id="q-feedback"></div>
-          <div class="quiz-footer">
-            <button class="btn-proximo" id="btn-proximo">
-              Próxima pergunta <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
+    <h1>Teste seu <span>conhecimento</span></h1>
+    <p>10 perguntas sobre mudanças climáticas, monitoramento ambiental e prevenção de desastres.</p>
+  </div>
+
+  <div class="quiz-wrapper">
+    <div class="quiz-card">
+
+      <div id="quiz-area">
+        <div class="quiz-progresso-bar">
+          <div class="quiz-progresso-fill" id="q-progresso"></div>
         </div>
-        <div class="resultado-area" id="resultado-area">
-          <div class="res-circulo resultado-excelente" id="res-circulo">
-            <span class="res-pct" id="res-pct">0%</span>
-            <span class="res-label">acertos</span>
-          </div>
-          <div class="res-texto">
-            <h2>Resultado Final</h2>
-            <p class="res-acertos-texto">
-              Você acertou <strong id="res-acertos">0</strong> de <strong id="res-total">10</strong> perguntas.
-            </p>
-            <p id="res-mensagem"></p>
-          </div>
-          <div class="res-acoes">
-            <button class="btn-refazer" onclick="location.reload()">
-              <i class="fa-solid fa-rotate-right"></i> Refazer quiz
-            </button>
-            <a href="../index.html" class="btn-home">
-              <i class="fa-solid fa-house"></i> Voltar à página principal
-            </a>
-          </div>
+
+        <div class="quiz-top">
+          <span class="q-numero" id="q-numero">Pergunta 1 de 10</span>
+        </div>
+
+        <p class="q-texto" id="q-texto"></p>
+
+        <div class="q-opcoes" id="q-opcoes"></div>
+
+        <div class="q-feedback" id="q-feedback"></div>
+
+        <div class="quiz-footer">
+          <button class="btn-proximo" id="btn-proximo">
+            Próxima pergunta <i class="fa-solid fa-arrow-right"></i>
+          </button>
         </div>
       </div>
+
+      <div class="resultado-area" id="resultado-area">
+        <div class="res-circulo resultado-excelente" id="res-circulo">
+          <span class="res-pct" id="res-pct">0%</span>
+          <span class="res-label">acertos</span>
+        </div>
+
+        <div class="res-texto">
+          <h2>Resultado Final</h2>
+          <p class="res-acertos-texto">
+            Você acertou <strong id="res-acertos">0</strong> de <strong id="res-total">10</strong> perguntas.
+          </p>
+          <p id="res-mensagem"></p>
+        </div>
+
+    
+
+        <div class="res-acoes">
+          <button class="btn-refazer" onclick="location.reload()">
+            <i class="fa-solid fa-rotate-right"></i> Refazer quiz
+          </button>
+          <a href="../index.html" class="btn-home">
+            <i class="fa-solid fa-house"></i> Voltar à página principal
+          </a>
+        </div>
+      </div>
+
     </div>
-    <script src="/script/quiz.js"></script>
-  </body>
+  </div>
+
+  <script src="/script/quiz.js"></script>
+</body>
 </html>
